@@ -1,0 +1,1 @@
+python -m mypy src/dataengtoolbox --install-types --ignore-missing-imports --non-interactive
