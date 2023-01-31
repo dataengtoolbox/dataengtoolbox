@@ -1,4 +1,5 @@
 import time
+import uuid
 import datetime as dt
 from typing import Optional
 
@@ -12,6 +13,7 @@ class CLI:
     def __init__(self):
         self.version = version
         self.execution_timestamp = dt.datetime.utcnow()
+        self.execution_id = str(uuid.uuid4())
 
     def hello(self, name: Optional[str] = None):
         return hello(name=name)
@@ -27,5 +29,3 @@ class CLI:
     def square(num: int) -> int:
         return num ** 2
 
-
-CLI.square(num=5)
