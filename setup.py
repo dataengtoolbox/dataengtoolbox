@@ -22,6 +22,11 @@ setup(
     package_dir={
         "": "src"
     },
+    package_data={
+        "": [
+            "VERSION",
+        ]
+    }
     install_requires=requirement_list,
     python_requires=">=3.8.10",
     scripts=[
