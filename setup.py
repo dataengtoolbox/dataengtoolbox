@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_namespace_packages
 
 with open(os.path.join("src", "dataengtoolbox", "VERSION"), "r") as version_file:
     version = version_file.read().strip()
@@ -18,6 +18,7 @@ setup(
     long_description=readme_content,
     long_description_content_type="text/markdown",
     author="ITESO MAF - Data Engineering Course",
+    packages=find_namespace_packages(where="src"),
     package_dir={
         "": "src"
     },
